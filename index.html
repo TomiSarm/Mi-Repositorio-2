@@ -16,20 +16,33 @@
       <div class="burger">
         <img src="hamburger1.jpg" alt="Classic Hamburger">
         <p>Classic Hamburger - $5</p>
-        <button class="add-to-cart" data-price="5" onclick="addToCart(this)">Add to Cart</button>
+        <button class="add-to-cart" data-name="Classic Hamburger" data-price="5">Add to Cart</button>
       </div>
-      <!-- Add more burgers here -->
+      <div class="burger">
+        <img src="hamburger2.jpg" alt="Cheeseburger">
+        <p>Cheeseburger - $6</p>
+        <button class="add-to-cart" data-name="Cheeseburger" data-price="6">Add to Cart</button>
+      </div>
+      <div class="burger">
+        <img src="hamburger3.jpg" alt="Bacon Hamburger">
+        <p>Bacon Hamburger - $7</p>
+        <button class="add-to-cart" data-name="Bacon Hamburger" data-price="7">Add to Cart</button>
+      </div>
+      <div class="burger">
+        <img src="hamburger4.jpg" alt="Double Cheeseburger">
+        <p>Double Cheeseburger - $8</p>
+        <button class="add-to-cart" data-name="Double Cheeseburger" data-price="8">Add to Cart</button>
+      </div>
     </section>
     <aside class="cart">
       <h2>Shopping Cart</h2>
       <ul id="cart-items"></ul>
       <p>Total: $<span id="total">0</span></p>
-      <button id="checkout" onclick="checkout()">Checkout</button>
     </aside>
   </main>
   <section class="form-container">
     <h2>Checkout Form</h2>
-    <form id="checkout-form" onsubmit="submitForm(event)">
+    <form id="checkout-form">
       <label for="name">Name:</label>
       <input type="text" id="name" required>
       <label for="address">Address:</label>
@@ -42,6 +55,6 @@
   <footer>
     <p>&copy; 2024 Hamburger Shop</p>
   </footer>
-  <script src="script.js"></script>
+  <script src="./JS/script.js"></script>
 </body>
 </html>
