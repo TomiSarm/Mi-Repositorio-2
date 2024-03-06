@@ -1,4 +1,44 @@
+let cart = [];
+let total = 0;
 
+function addToCart(price) {
+  cart.push(price);
+  total += price;
+  updateCart();
+}
+
+function updateCart() {
+  const cartItems = document.getElementById('cart-items');
+  cartItems.innerHTML = '';
+  cart.forEach(item => {
+    const li = document.createElement('li');
+    li.textContent = '$' + item;
+    cartItems.appendChild(li);
+  });
+  document.getElementById('total').textContent = total;
+}
+
+function checkout() {
+  alert('Thank you for your purchase!');
+  cart = [];
+  total = 0;
+  updateCart();
+}
+
+function submitForm(event) {
+  event.preventDefault();
+  const name = document.getElementById('name').value;
+  const address = document.getElementById('address').value;
+  const phone = document.getElementById('phone').value;
+  
+  console.log('Name:', name);
+  console.log('Address:', address);
+  console.log('Phone:', phone);
+  
+  document.getElementById('name').value = '';
+  document.getElementById('address').value = '';
+  document.getElementById('phone').value = '';
+}
 
 
 

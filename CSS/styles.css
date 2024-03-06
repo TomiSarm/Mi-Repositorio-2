@@ -1,0 +1,51 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+  }
+  
+  .burger {
+    width: 200px;
+  }
+  
+  .burger img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .cart {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .cart button {
+    margin-top: 10px;
+  }
+  
+  .form {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .form label,
+  .form input {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .form input {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  
+  .form button {
+    margin-top: 10px;
+  }
