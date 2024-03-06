@@ -1,53 +1,35 @@
-let cart = [];
-let total = 0;
-
-function addToCart(price) {
-  cart.push(price);
-  total += price;
-  updateCart();
-}
-
-function updateCart() {
-  const cartItems = document.getElementById('cart-items');
-  cartItems.innerHTML = '';
-  cart.forEach(item => {
-    const li = document.createElement('li');
-    li.textContent = '$' + item;
-    cartItems.appendChild(li);
-  });
-  document.getElementById('total').textContent = total;
-}
-
-function checkout() {
-  alert('Thank you for your purchase!');
-  cart = [];
-  total = 0;
-  updateCart();
-}
-
-function submitForm(event) {
-  event.preventDefault();
-  const name = document.getElementById('name').value;
-  const address = document.getElementById('address').value;
-  const phone = document.getElementById('phone').value;
+function addToCart(button) {
+    const product = button.parentNode;
+    const price = parseInt(product.getAttribute('data-price'));
+    const name = product.querySelector('p').textContent;
+    
+    const cartItems = document.getElementById('cart-items');
+    const item = document.createElement('li');
+    item.textContent = name + ' - $' + price;
+    cartItems.appendChild(item);
+    
+    updateTotal(price);
+  }
   
-  console.log('Name:', name);
-  console.log('Address:', address);
-  console.log('Phone:', phone);
+  function updateTotal(price) {
+    const totalSpan = document.getElementById('total');
+    let total = parseInt(totalSpan.textContent);
+    total += price;
+    totalSpan.textContent = total;
+  }
   
-  document.getElementById('name').value = '';
-  document.getElementById('address').value = '';
-  document.getElementById('phone').value = '';
-}
-
-
-
-
-
-
-
-
-
+  function checkout() {
+    alert('Thank you for your purchase!');
+  }
+  
+  function submitForm(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const address = document.getElementById('address').value;
+    const phone = document.getElementById('phone').value;
+    
+    alert('Order placed!\nName: ' + name + '\nAddress: ' + address + '\nPhone: ' + phone);
+  }
 
 
 
