@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Classic Hamburger",
+    "price": 5,
+    "image": "IMG/hambur-simple.png"
+  },
+  {
+    "name": "Cheeseburger",
+    "price": 6,
+    "image": "IMG/Cheeseburger.jpg"
+  },
+  {
+    "name": "Bacon Hamburger",
+    "price": 7,
+    "image": "IMG/baconburger.jpg"
+  },
+  {
+    "name": "Double Cheeseburger",
+    "price": 8,
+    "image": "IMG/doublecheeseburger.jpg"
+  }
+]
